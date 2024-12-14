@@ -1,0 +1,127 @@
+1. Declaração e atribuição de variáveis
+python
+x = 10
+y = "Olá, mundo"
+z = True
+
+2. Funções simples
+python
+def saudacao():
+    print("Olá, mundo!")
+
+3. Funções com argumentos
+python
+def soma(a, b):
+    return a + b
+
+def saudacao(nome, mensagem="Olá"):
+    print(f"{mensagem}, {nome}!")
+
+4. Estruturas condicionais simples
+python
+def avaliar_numero(x):
+    if x > 10:
+        return "Maior que 10"
+    elif x == 10:
+        return "Igual a 10"
+    else:
+        return "Menor que 10"
+
+5. Loops: `for` com `range`
+python
+for i in range(5):
+    print(i)
+
+6. Loops: `for` com iteráveis
+python
+nomes = ["Ana", "João", "Maria"]
+for nome in nomes:
+    print(f"Olá, {nome}!")
+
+7. Loops: `while`
+python
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+
+8. Funções com argumentos variáveis (`*args`)
+python
+def soma(*numeros):
+    total = 0
+    for numero in numeros:
+        total += numero
+    return total
+
+9. Booleans e expressões lógicas
+python
+x = True
+y = False
+
+if x and not y:
+    print("x é verdadeiro e y é falso")
+
+10. Operações aritméticas
+python
+a = 10
+b = 20
+soma = a + b
+produto = a * b
+diferenca = a - b
+divisao = a / b
+
+11. Funções com múltiplas condições
+python
+def verificar_numero(n):
+    if n < 0:
+        return "Negativo"
+    elif n == 0:
+        return "Zero"
+    else:
+        return "Positivo"
+
+12. Uso de f-strings
+python
+nome = "João"
+idade = 25
+print(f"Meu nome é {nome} e eu tenho {idade} anos.")
+
+13. Combinando tudo
+python
+def verificar_lista(lista):
+    for item in lista:
+        if item % 2 == 0:
+            print(f"{item} é par")
+        else:
+            print(f"{item} é ímpar")
+
+numeros = [1, 2, 3, 4, 5]
+verificar_lista(numeros)
+
+14. Caso mais complexo
+python
+def processar_dados(dados):
+    resultados = []
+    for dado in dados:
+        if dado > 10:
+            resultados.append("Alto")
+        elif dado > 5:
+            resultados.append("Médio")
+        else:
+            resultados.append("Baixo")
+    return resultados
+
+dados = [2, 8, 15, 3, 7]
+resultado = processar_dados(dados)
+for r in resultado:
+    print(r)
+
+15. Variáveis booleanas em condicionais
+python
+ativo = True
+admin = False
+
+if ativo:
+    print("O usuário está ativo")
+if not admin:
+    print("O usuário não tem privilégios de administrador")

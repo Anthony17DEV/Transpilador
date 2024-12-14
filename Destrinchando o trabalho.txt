@@ -1,0 +1,70 @@
+Estrutura Inicial do Trabalho
+
+1. Justificativa
+Por que transpilar Python para JavaScript?
+- JavaScript é amplamente suportado em navegadores, essencial para aplicações web modernas.
+- Facilita o uso de scripts escritos em Python em ambientes web sem exigir reescrita manual para JavaScript.
+
+
+2. Elementos Básicos
+
+Tokens Suportados:
+1. Palavras Reservadas:
+   - `if`, `else`, `for`, `while`, `def`, `return`, `True`, `False`.
+2. Operadores:
+   - Aritméticos: `+`, `-`, `*`, `/`.
+   - Relacionais: `==`, `!=`, `<`, `>`, `<=`, `>=`.
+   - Lógicos: `and`, `or`, `not`.
+3. Delimitadores:
+   - `(`, `)`, `{`, `}`, `[`, `]`, `:`.
+4. Identificadores:
+   - Nomes de variáveis e funções.
+5. Literais:
+   - Números inteiros e decimais, strings entre aspas simples ou duplas.
+
+Gramática:
+- Declaração de Variáveis: `var = valor` → `let var = valor;`
+- If/Else: 
+  - Python: `if condition:\n\tstatement`
+  - JS: `if (condition) { statement }`
+- Loops: 
+  - Python: `for i in range(n):` → JS: `for (let i = 0; i < n; i++) {`
+- Funções: 
+  - Python: `def func():` → JS: `function func() {`
+
+---
+
+3. Implementação do Transpilador
+
+Etapa 1: Análise Léxica
+Criar um scanner que analisa o código Python e separa os tokens usando expressões regulares. Utilizar a biblioteca `re` do Python para isso.
+
+Etapa 2: Análise Sintática
+Implementar um parser para verificar se os tokens seguem a gramática definida. Você pode usar:
+- PLY (Python Lex-Yacc): Uma biblioteca que facilita a criação de parsers.
+- Parser Manual: Baseado em regras gramaticais.
+
+Etapa 3: Geração de Código
+Converter os elementos de Python para a sintaxe correspondente de JavaScript.
+
+---
+
+4. Funções Suportadas
+- Declaração/Atribuição de Variáveis: `x = 10` → `let x = 10;`
+- Expressões Aritméticas: `x + y` → `x + y`
+- Condicional: `if/else`
+- Loops: `for`, `while`
+- Expressões Lógicas: `and`, `or` → `&&`, `||`
+- Funções: Definição e chamadas.
+
+---
+
+5. Estrutura do Projeto
+- Criar os seguintes arquivos:
+  1. `scanner.py`: Para análise léxica.
+  2. `parser.py`: Para análise sintática.
+  3. `code_generator.py`: Para geração do código JavaScript.
+  4. `main.py`: Para orquestrar as etapas.
+- Adicionar um arquivo `README.md` no repositório GitHub com:
+  - Descrição do projeto.
+  - Passos para executar o transpilador.
